@@ -34,6 +34,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Fatal("failed to read config: %w", err)
 	}
+
 	exportCSVToGCS(ctx, cfg)
 }
 
